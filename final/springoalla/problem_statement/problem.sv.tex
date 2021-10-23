@@ -1,0 +1,35 @@
+\problemname{Springoalla}
+Springoalla älskar att löpträna.
+Totalt känner hon till $n$ löpspår och hon vet exakt hur lång tid det tar för henne att springa det spåret och sedan tillbaka.
+Den första gången hon springer på ett nytt spår, så lär hon känna spåret lite bättre.
+Närmare bestämt lär hon sig var i spåret hon kommit halvvägs, och har då möjlighet att springa tillbaka efter halva spåret.
+Då blir löptiden halverad.
+T.ex. kan hon springa ett halvt $20$-minutersspår på $10$ minuter, men bara efter att hon redan sprungit hela spåret en gång.
+
+Springoalla vill löpträna i minst $t$ minuter men hon är också noggrann med att inte träna för länge.
+Givet tiderna för varje spår, beräkna hur lång tid $t_s$ hon minst måste springa.
+Talet $t_s$ ska alltså vara så litet som möjligt men uppfylla $t_s \ge t$.
+Om det finns flera sätt att springa $t_s$ minuter vill Springoalla springa så litet antal sträckor $n_s$ som möjligt, där man räknar varje gång hon springer bort från utgångspunkten som en sträcka, oavsett om det är ett helt eller halvt spår.
+
+\section*{Indata}
+På första raden står två heltal $n$ och $t$, där $1 \le n \le 1\,000$ är antalet löpbanor och $1 \le t \le 100\,000$ är tiden som Springoalla vill löpträna.
+På andra raden står $n$ stycken heltal $l_i$, där $1 \le l_i \le 40\,000$ kommer vara ett jämnt heltal och är antalet minuter det tar att springa löpspår $i$.
+Talet $t$ behöver däremot inte vara jämnt.
+
+\section*{Utdata}
+Första utdataraden ska innehålla de två heltalen $t_s$ och $n_s$: den tid Springoalla måste springa respektive hur många sträckor hon totalt springer.
+Därefter ska en rad skrivas med $n$ heltal, där det $i$:te heltalet anger hur många minuter Springoalla sprang på spår $i$.
+Finns det flera lösningar med samma $t_s$ och $n_s$ kan du ange vilken som helst av dem.
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  Grupp & Poängvärde & Gränser \\ \hline
+  $1$    & $20$        & $n \le 10, t \le 1\,000$ \\ \hline 
+  $2$    & $30$        & Springoalla only needs to run whole trails \\ \hline
+  $3$    & $50$        & No further constraints. \\ \hline 
+\end{tabular}
