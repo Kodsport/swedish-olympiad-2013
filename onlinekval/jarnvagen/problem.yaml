@@ -1,0 +1,14 @@
+name: Järnvägen
+source: Programmeringsolympiadens onlinekval 2013
+author: PO
+rights_owner: Programmeringsolympiaden
+license: cc by-sa  
+limits:
+ time_multiplier: 15
+
+type: scoring
+grading:
+  on_reject: grade
+  range: 0 100
+  accept_score: 10
+

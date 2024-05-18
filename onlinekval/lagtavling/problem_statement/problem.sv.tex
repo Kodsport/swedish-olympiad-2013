@@ -1,0 +1,19 @@
+\problemname{2. Lagtävling}
+
+Vissa anser att PO borde ha en lagtävling där den bästa skolan utses baserat på de individuella resultaten. Då uppkommer naturligtvis frågan hur denna vinnande skola ska utses.
+Om vi har $N$ deltagare i PO och vi antar att uppgifterna är så utslagsgivande att inga deltagare får samma resultat, så kan resultatet beskrivas som en sträng med $N$ bokstäver, där varje bokstav representerar en skola och är ordnade så att den första bokstaven anger vinnarens skola, nästa bokstav anger den andraplacerades skola o.s.v. (vi antar i denna uppgift att högst 26 skolor deltar, så bokstäverna A-Z räcker).
+
+Ett möjligt sätt att utse vinnande skola vore då att lägga ihop placeringssiffrorna för de K bästa eleverna från varje skola och välja den med minst placeringssiffra (skolor med mindre än K elever räknas givetvis inte). Problemet med detta system illustreras bäst med ett exempel: Antag att resultatet är AABCBBCCDDDA
+och att $K=3$. Då vinner B med placeringssumman $3+5+6=14$ medan A får $1+2+12=15$. Men om vi istället jämför A direkt med varje annat lag, utan att ta med deltagarna från övriga lag när vi beräknar placeringssiffrorna. Då vinner A varje sådan {\em duell} med $1+2+6=9$ mot $3+4+5=12$. Observera att {\em alla} A:s deltagare kan påverka placeringarna för lag B, inte bara de $K$ första.
+
+Ett lag som {\em vinner alla} sådana hypotetiska dueller mot övriga lag brukar kallas för en {\em Condorcet-vinnare}, och det faktum att vår första metod inte alltid utser Condorcet-vinnaren, även om en sådan finns, kan beskrivas som att metoden inte uppfyller {\em Condorcet-kriteriet}. Föga förvånande används dessa termer oftare om politiska valsystem än programmeringstävlingsresultat.
+
+Skriv ett program som, givet en resultatlista och talet $K$, avgör om det finns en Condorcet-vinnare bland skolorna.
+
+\section*{Indata}
+
+Först en rad med två heltal $N$ och $K$, det totala antalet deltagare och antalet som ska räknas med för varje skola ($1\le N \le 1000$ och $1\le K \le 100$). Därefter en rad med $N$ bokstäver, valda bland A--Z. Observera att en skola med mindre än $K$ deltagare automatiskt förlorar sina dueller.
+
+\section*{Utdata}
+
+Programmet ska skriva ut en rad med bokstaven representerande den skola som är Condorcet-vinnare, eller strängen "Ingen" om det inte finns någon Condorcet-vinnare.

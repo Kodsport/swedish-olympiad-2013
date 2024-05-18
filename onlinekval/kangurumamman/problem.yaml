@@ -1,0 +1,10 @@
+author: Programmeringsolympiaden
+source: Programmeringsolympaidens onlinekval 2012
+rights_owner: Programmeringsolympiaden
+license: cc by-sa
+
+type: scoring
+grading:
+  on_reject: grade
+  range: 0 100
+  accept_score: 20

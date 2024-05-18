@@ -1,0 +1,12 @@
+name: Wikipediaspråk
+source: Programmeringsolympiadens onlinekval 2013
+author: Programmeringsolympiaden
+rights_owner: Programmeringsolympiaden
+license: cc by-sa  
+
+type: scoring
+grading:
+  on_reject: grade
+  range: 0 100
+  accept_score: 10
+
