@@ -2,4 +2,4 @@
 
 import sys
 
-print "AC 0"
+print("AC 0")
