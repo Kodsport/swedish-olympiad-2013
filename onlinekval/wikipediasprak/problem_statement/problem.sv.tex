@@ -1,4 +1,4 @@
-\problemname{6. Wikipediaspråk}
+\problemname{Wikipediaspråk}
 
 Om jag säger "Sortera orden [\emph{zebra, anka, duva}]!" så svarar du snabbt [\emph{anka, duva, zebra}]. Lätt, va? Det gäller även om du inte känner igen ordens innebörd eller alla tecken i språket, typ [\emph{fünf, como estás, désolé}]. Vi kan ju svenska och engelska och vet att troligen är svaret [\emph{como estás, désolé, fünf}]. Ännu inte så svårt. Men troligen finns det få programmeringsolympiaddeltagare som kan sortera sådana ordlistor så fort kinesiska, persiska och andra icke-latinska tecken är inblandade i ordlistorna. Hur skulle du jämföra ett engelskt ord med ett persiskt ord? En av problemförfattarna vet visserligen hur persiska ord ska uttalas, men utan den kunskapen blir det svårt.
 
@@ -8,7 +8,21 @@ Antag nu att vi vill sammanställa en sorterad lista av ord. Till vår hjälp ha
 \section*{Indata}
 För enkelhets skull behöver du inte läsa in själva orden, utan varje ord representeras istället av ett index mellan $0$ och $N-1$. På första raden av indatan står två heltal $N$ ($1 \leq N \leq 130000$) och $P$ ($1 \leq P \leq 10^5$), där $N$ är antalet ord och $P$ är antalet personer. Därefter följer $P$ rader som vardera anger ordningen på de ord som en viss person känner till. Varje sådan rad börjar med ett heltal $2 \leq p_i \leq 25$ som beskriver hur många ord personen i fråga känner till den inbördes sorteringen för. Sedan följer $p_i$ heltal i intervallet $0$ till $N-1$, indexen för de ord personen känner till i den ordning de ska sorteras. Det är inte säkert att alla de $N$ orden finns med på någon lista, och ett ord kan givetvis förekomma på flera listor. Det kommer inte att finnas motsägelser i indatan.
 
-{\bf Delpoäng:} För 30\%\ av poängen gäller att $N \le 30$.
 
 \section*{Utdata}
-På första raden ska programmet skriva ut det maximala antalet ord $M$ i en garanterat korrekt sorterad ordlista. Därefter ska programmet skriva ut en rad med en sådan sorterad ordlista innehållandes de $M$ ordindexen. Om det finns flera tänkbara sådana ordlistor kan programmet skriva vilken som helst av dem.
+Skriv först ut ett heltal: det maximala antalet ord $M$ i en garanterat korrekt sorterad ordlista. Skriv därefter
+ut en rad med en sådan sorterad ordlista innehållandes de $M$ ordindexen. Om det finns flera tänkbara sådana
+ordlistor kan programmet skriva vilken som helst av dem.
+
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Grupp} & \textbf{Poäng} & \textbf{Gränser} \\ \hline
+  $1$    & $30$       & $N \leq 30$ \\ \hline
+  $2$    & $70$       & Inga ytterligare begränsningar. \\ \hline
+\end{tabular}
