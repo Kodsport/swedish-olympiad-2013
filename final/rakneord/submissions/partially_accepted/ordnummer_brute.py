@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3/
 import sys
 
 s1 = [
@@ -82,23 +82,11 @@ def rakneord(n):
     )
 
 
-fusk = {
-    672536727: "one",
-    9672536749: "tae",
-    80734567197: "ami",
-    806: "uar",
-    7845763012682: "ert",
-    25976463894760: "mfe",
-    86676463894771: "gom",
-}
-
 line = sys.stdin.readline().split()
 N = int(line[0])
 K = int(line[1])
-if N > 500000:
-    print(fusk[K])
-else:
-    tal = [rakneord(i) for i in range(1, N + 1)]
-    tal.sort()
-    s = "".join(tal)
-    print(s[(K - 1) : (K + 2)])
+
+tal = [rakneord(i) for i in range(1, N + 1)]
+tal.sort()
+s = "".join(tal)
+print(s[(K - 1) : (K + 2)])
