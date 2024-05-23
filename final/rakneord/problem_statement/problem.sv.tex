@@ -1,0 +1,65 @@
+\problemname{Räkneord}
+
+Monika skriver ner alla räkneord mellan 1 och $N$. Sedan sorterar hon orden alfabetiskt och konkatenerar dem till en enda lång sträng. Skriv ett program som hittar bokstav nummer $K$, $K+1$ och $K+2$ i Monikas sträng.
+
+För att undvika problem med teckenkodning byter vi ut å och ä mot a. Vidare använder vi formerna etthundra, ettusen (observera stavningen), enmiljon och enmiljard, men bara när siffran 1 står {\em ensam} före mängdordet (ej inräknat tidigare mängdord). När siffran 1 däremot står sist i ett förled som betecknar {\em flera} tusen, miljoner eller miljarder så skriver vi för enkelhets skull alltid "en": tjugoentusen, etthundraenmiljoner, tvahundraattioenmiljarder etc. Allra sist i ett räkneord skriver vi dock alltid siffran 1 som "ett".
+
+En tabell med de grundläggande räkneorden och några exempel på längre ord bringar förhoppningsvis klarhet i reglerna:
+
+\begin{tabular}{|r|l||r|l|} \hline
+{\bf Tal} & {\bf Räkneord} & {\bf Tal} & {\bf Räkneord} \\ \hline
+1 & ett & 10 & tio\\
+2 & tva & 20 & tjugo\\
+3 & tre & 30 & trettio\\
+4 & fyra & 40 & fyrtio\\
+5 & fem & 50 & femtio\\
+6 & sex & 60 & sextio\\
+7 & sju & 70 & sjuttio\\
+8 & atta & 80 & attio\\
+9 & nio & 90 & nittio\\
+11 & elva & 100 & etthundra\\
+12 & tolv & 198 & etthundranittioatta\\
+13 & tretton & 201 & tvahundraett\\
+14 & fjorton & 1121 & ettusenetthundratjugoett\\
+15 & femton & $581\,743$ & femhundraattioentusensjuhundrafyrtiotre \\
+16 & sexton & $51\,101\,001$ & femtioenmiljoneretthundraentusenett\\
+17 & sjutton & $162\,500\,020$ & etthundrasextiotvamiljonerfemhundratusentjugo\\
+18 & arton & $1\,002\,001\,004$ & enmiljardtvamiljonerettusenfyra\\
+19 & nitton & $91\,011\,091\,000$ & nittioenmiljarderelvamiljonernittioentusen\\ \hline
+\end{tabular}
+
+Och som en ytterligare kontrollmöjlighet ger vi längden på Monikas sträng för några olika $N$:
+
+\begin{tabular}{|r|r|}\hline
+{\bf N} & {\bf Strängens längd} \\ \hline
+999 & 16260 \\
+9999 & 235600 \\
+99999 & 2908000 \\
+999999 & 37425000 \\
+9999999   & 472250000 \\
+99999999 & 5319500000\\
+999999999 & 61585000000\\
+9999999999 & 722850000000 \\
+99999999999 &	7834500000000 \\
+999999999999 &86744000000000 \\ \hline
+\end{tabular}
+
+
+\section*{Indata}
+En rad med två heltal $N$ och $K$, där $1\leq N\leq 999\,999\,999\,999$ och $1\leq K \leq L-2$, där $L$ är längden på den bildade strängen.
+
+Delpoäng: För 30\% av poängen är $ N\leq 500\,000$, medan för resten av poängen är $ N\geq 100\,000\,000$. För 30\% av poängen är $ N=999\,999\,999\,999$.
+
+\section*{Utdata}
+En rad med tre bokstäver utan åtskiljande blanksteg: bokstav nummer $K$, $K+1$ och $K+2$ i strängen. 
+
+\section*{Förklaring till första exemplet}
+
+Monikas sträng, skriven med 40 bokstäver per rad, är
+
+\begin{verbatim}
+artonattaelvaettfemfemtonfjortonfyranion
+ittonsexsextonsjusjuttontiotjugotjugoett
+tjugofemtjugofyratjugosextjugotretjugotv
+atolvtretrettontva
+\end{verbatim}
