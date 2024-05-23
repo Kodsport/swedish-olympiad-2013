@@ -1,0 +1,16 @@
+source: Programmeringsolympaidens finaltävling 2013
+author: Programmeringsolympiaden
+rights_owner: Programmeringsolympiaden
+license: cc by-sa
+
+type: scoring
+
+grading: 
+  on_reject: grade
+  range: 0 100
+  accept_score: 20
+
+limits:
+ time_multiplier: 2
+ time_safety_margin: 1.5
+ time_add: 5
