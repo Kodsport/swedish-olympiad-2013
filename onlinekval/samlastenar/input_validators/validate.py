@@ -12,10 +12,10 @@ assert int_re.match(line)
 N = int(line.strip())
 assert 1 <= N <= 100000
 
-for i in xrange(N):
+for i in range(N):
     line = stdin.readline()
     assert len(line.strip().split()) == 2
-    x,y = map(float,line.strip().split())
+    x,y = list(map(float,line.strip().split()))
     assert math.sqrt(x*x+y*y) <= 100.0
 
 assert len(stdin.readline()) == 0

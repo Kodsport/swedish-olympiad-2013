@@ -4,10 +4,6 @@ author: Oskar Werkelin Ahlin
 rights_owner: Programmeringsolympiaden
 license: cc by-sa  
 validator_flags: float_absolute_tolerance 2e-4
-
 type: scoring
 grading:
-  on_reject: grade
-  range: 0 100
-  accept_score: 10
-
+    show_test_data_groups: true
