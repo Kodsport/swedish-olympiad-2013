@@ -10,12 +10,12 @@ topline_pat = int_pat + " " + int_pat
 topline_re = re.compile(topline_pat)
 
 assert topline_re.match(line)
-N,P = map(int, line.strip().split())
+N,P = list(map(int, line.strip().split()))
 
 assert 1 <= N <= 130000
 assert 1 <= P <= 100000
 
-for i in xrange(P):
+for i in range(P):
     line = stdin.readline()
     numbers = line.strip().split()
     assert 3 <= len(numbers) <= 26
