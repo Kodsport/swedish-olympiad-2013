@@ -10,43 +10,19 @@ sample 2
 sample 3
 sample 4
 sample 5
+sample 6
 
-group 01_group01 20
+group group1 40
+tc_manual a1-1
+tc_manual a1-2
+tc_manual a1-3
+tc_manual a1-4
+
+group group2 60
+include_group sample
+include_group group1
 tc_manual ../manual-tests/g01.in
-tc 1
-tc 2
-tc 3
-tc 4
-tc 5
-
-group 02_group02 20
 tc_manual ../manual-tests/g02.in
-tc 1
-tc 2
-tc 3
-tc 4
-tc 5
-
-group 03_group03 20
 tc_manual ../manual-tests/g03.in
-tc 1
-tc 2
-tc 3
-tc 4
-tc 5
-
-group 04_group04 20
 tc_manual ../manual-tests/g04.in
-tc 1
-tc 2
-tc 3
-tc 4
-tc 5
-
-group 05_group05 20
 tc_manual ../manual-tests/g05.in
-tc 1
-tc 2
-tc 3
-tc 4
-tc 5

@@ -21,14 +21,24 @@ Ture förlitar sig inte på turen utan har fuskat till sig den följd av tal som
 
 
 \section*{Indata}
- 
-Första raden innehåller brickans dimension $N$, där $1\leq N \leq
-100$, och antalet utrop $K$, där $1 \leq K \leq 10\,000$. Därefter följer $N$ rader vardera innehållande $N$ heltal i intervallet $1\ldots 1000$. Detta är Tures bingobricka. Slutligen följer en rad med $K$ heltal i samma intervall, de utropade talen i den ordning de ropas ut.
+Den första raden innehåller heltalen $N$ och $K$ ($1\leq N \leq 100$, $1 \leq K \leq 10\,000$), brickans
+sidlängd och antalet utrop.
+
+Därefter följer $N$ rader som vardera innehåller $N$ heltal i intervallet $1 \ldots 1000$. Detta är Tures bingobricka.
+
+Slutligen följer en rad med $K$ heltal i samma intervall, de utropade talen i den ordning de ropas ut.
 
 \section*{Utdata}
+Skriv ut ett heltal: det minsta antalet utrop som behövs innan Ture får en full rad (horisontellt,
+vertikalt eller diagonalt). Det kommer aldrig krävas mer än $K$ utrop.
 
-Ett heltal: det minsta antalet utrop som behövs innan Ture får en full rad (horisontellt, vertikalt eller diagonalt). Det kommer aldrig krävas mer än $K$ utrop.
-
-
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Grupp} & \textbf{Poäng} & \textbf{Gränser} \\ \hline
+  $1$    & $20$       & $K \leq 100$ \\ \hline
+  $2$    & $40$       & Det är aldrig optimalt att försöka få bingo längs diagonalerna. \\ \hline
+  $3$    & $40$       & Inga ytterligare begränsningar. \\ \hline
+\end{tabular}
 
 

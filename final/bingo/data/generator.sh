@@ -8,27 +8,19 @@ samplegroup
 sample 1
 sample 2
 
-group 01_group01 20
+group group1 20 # Kinda weak test data, but that's outside of my salary range
+tc 1
 tc_manual ../manual-tests/g01.in
-tc 1
-tc 2
-
-group 02_group02 20
 tc_manual ../manual-tests/g02.in
-tc 1
-tc 2
 
-group 03_group03 20
-tc_manual ../manual-tests/g03.in
-tc 1
-tc 2
-
-group 04_group04 20
+group group2 40
+tc g01
+tc g02
 tc_manual ../manual-tests/g04.in
-tc 1
+tc_manual ../manual-tests/g05.in
 tc 2
 
-group 05_group05 20
-tc_manual ../manual-tests/g05.in
-tc 1
-tc 2
+group group3 40
+include_group group1
+include_group group2
+tc_manual ../manual-tests/g03.in
