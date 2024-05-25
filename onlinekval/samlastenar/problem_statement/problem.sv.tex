@@ -1,4 +1,4 @@
-\problemname{5. Samla stenar}
+\problemname{Samla stenar}
 
 $N$ stenar ligger stökigt utspridda i ett koordinatsystem. Varje sten har en koordinat ($x_i$,$y_i$). Det har blivit dags att samla ihop stenarna, och till din hjälp har du skaffat en supersmart stenplockarmaskin.
 
@@ -9,20 +9,30 @@ Bränsle är dyrt, så du tänkte försöka vara lite smart. Du vet att när mas
 \section*{Delpoäng}
 På det här problemet kan du samla poäng trots att du inte löser problemet helt och hållet.
 
-\begin{itemize}
-\item För 30\% av poängen gäller att alla stenar ligger på x-axeln, och $1 \leq N \leq 1000$.
-\item För 30\% av poängen gäller att alla stenar ligger på x-axeln, och $1 \leq N \leq 10^5$.
-\item För 40\% av poängen gäller att stenarna kan ligga var som helst inom angiven radie, och $1 \leq N \leq 10^5$.
-\end{itemize}
-
 \section*{Indata}
-På första raden i indata står heltalet $N$, antalet stenar.
+Den första raden innehåller heltalet $N$ ($1 \leq N \leq 10^5$), antalet stenar.
 
-Sedan följer $N$ rader med par av flyttal $x_i y_i$, stenarnas koordinater. Alla stenar i indata ligger maximalt 100 längdenheter från origo.
+Sedan följer $N$ rader med par av flyttal $x_i y_i$, stenarnas koordinater. Alla stenar i
+indata ligger maximalt 100 längdenheter från origo.
+
 \section*{Utdata}
-Utdata ska bestå av ett enda flyttal: Minsta möjliga totala sträcka som maskinen har åkt efter att den samlat upp alla stenar. Ett fel mindre än $10^{-4}$ betraktas som korrekt.
+Skriv ut ett heltal: minsta möjliga totala sträcka som maskinen har åkt efter att den samlat upp alla stenar. Ett absolut fel mindre än $10^{-4}$ betraktas som korrekt.
 
 {\bf Tips:} Se till att ditt program skriver ut tillräckligt många decimaler även när svaret är stort.
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Grupp} & \textbf{Poäng} & \textbf{Gränser} \\ \hline
+  $1$    & $30$       & Alla stenar ligger på x-axeln och $N \leq 1000$. \\ \hline
+  $2$    & $30$       & Alla stenar ligger på x-axeln. \\ \hline
+  $3$    & $40$       & Inga ytterligare begränsningar. \\ \hline
+\end{tabular}
+
 
 \section*{Förklaring till exempel 1}
 
