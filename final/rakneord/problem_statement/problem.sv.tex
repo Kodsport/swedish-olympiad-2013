@@ -2,7 +2,7 @@
 
 Monika skriver ner alla räkneord mellan 1 och $N$. Sedan sorterar hon orden alfabetiskt och konkatenerar dem till en enda lång sträng. Skriv ett program som hittar bokstav nummer $K$, $K+1$ och $K+2$ i Monikas sträng.
 
-För att undvika problem med teckenkodning byter vi ut å och ä mot a. Vidare använder vi formerna etthundra, ettusen (observera stavningen), enmiljon och enmiljard, men bara när siffran 1 står {\em ensam} före mängdordet (ej inräknat tidigare mängdord). När siffran 1 däremot står sist i ett förled som betecknar {\em flera} tusen, miljoner eller miljarder så skriver vi för enkelhets skull alltid "en": tjugoentusen, etthundraenmiljoner, tvahundraattioenmiljarder etc. Allra sist i ett räkneord skriver vi dock alltid siffran 1 som "ett".
+För att undvika problem med teckenkodning byter vi ut å och ä mot a. Vidare använder vi formerna etthundra, ettusen (observera stavningen), enmiljon och enmiljard, men bara när siffran 1 står {\em ensam} före mängdordet (ej inräknat tidigare mängdord). När siffran 1 däremot står sist i ett förled som betecknar {\em flera} tusen, miljoner eller miljarder så skriver vi för enkelhets skull alltid ``en'': tjugoentusen, etthundraenmiljoner, tvahundraattioenmiljarder etc. Allra sist i ett räkneord skriver vi dock alltid siffran 1 som ``ett''.
 
 En tabell med de grundläggande räkneorden och några exempel på längre ord bringar förhoppningsvis klarhet i reglerna:
 
@@ -46,12 +46,23 @@ Och som en ytterligare kontrollmöjlighet ger vi längden på Monikas sträng f�
 
 
 \section*{Indata}
-En rad med två heltal $N$ och $K$, där $1\leq N\leq 999\,999\,999\,999$ och $1\leq K \leq L-2$, där $L$ är längden på den bildade strängen.
-
-Delpoäng: För 30\% av poängen är $ N\leq 500\,000$, medan för resten av poängen är $ N\geq 100\,000\,000$. För 30\% av poängen är $ N=999\,999\,999\,999$.
+En rad med två heltal $N$ och $K$, där $1 \leq N < 10^12$ och $1 \leq K \leq L-2$, där $L$ är längden på den bildade strängen.
 
 \section*{Utdata}
 En rad med tre bokstäver utan åtskiljande blanksteg: bokstav nummer $K$, $K+1$ och $K+2$ i strängen. 
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Grupp} & \textbf{Poäng} & \textbf{Gränser} \\ \hline
+  $1$   & $15$       & $N \leq 2000 $\\ \hline
+  $2$   & $20$       & $N \leq 5*10^5 $\\ \hline
+  $3$   & $65$       & Inga ytterligare begränsningar. \\ \hline
+\end{tabular}
 
 \section*{Förklaring till första exemplet}
 
