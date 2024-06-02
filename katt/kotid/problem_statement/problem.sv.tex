@@ -1,0 +1,35 @@
+\problemname{Kötid}
+Du har fått jobb på ett välkänt nöjesfält. Det finns många intressanta problem där som behöver lösas, men ditt första uppdrag är att förbättra informationen till de som köar för berg- och dalbanan. Det bästa de har nu är en skylt som säger ``20 minuters kö härifrån'', oavsett hur lång kön är.
+
+Den enda berg- och dalbanevagnen har plats för $K$ stycken personer och tar 1 minut för att köra ett varv. Av- och påstigning tar ingen tid. Besökare kommer till kön i grupper som inte kan tänka sig att delas upp mellan flera vagnar. Det händer därför ibland att en vagn inte fylls helt då nästföljande grupp är för stor. När detta sker så gör attraktionsvärdarna sitt bästa med att fylla vagnen genom att låta någon grupp som står senare i kön gå före. Om det till exempel finns $x$ stycken lediga platser i nuvarande vagn så letar de upp nästa grupp i kön som har storlek \emph{mindre än eller lika med} $x$ och fyller vagnen med den. Denna process upprepas sedan tills dess att ingen mer grupp får plats i vagnen. Ditt uppdrag är att för varje grupp i kön räkna ut hur länge de kommer att behöva köa.
+
+\section*{Indata}
+Den första raden innehåller två heltal $N$ och $K$ ($1 \leq N \leq 10^6$, $1 \leq K \leq 10^8$), antal
+grupper i kön och antal personer per vagn. På nästa rad följer $N$ stycken heltal $g_i$, ($1 \leq g_i \leq K$),
+storleken på grupperna i kön. Den första gruppen i indata är den som står först i kön.
+
+\section*{Utdata}
+Skriv ut en rad med $N$ stycken heltal separerade av mellanslag, kötiden för varje grupp.
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Grupp} & \textbf{Poäng} & \textbf{Gränser} \\ \hline
+  $1$    & $20$       & $N \leq 1000$, $1 \leq K \leq N$ \\ \hline
+  $2$    & $40$       & $N \leq 10^5$ \\ \hline
+  $3$    & $40$       & Inga ytterligare begränsningar. \\ \hline
+\end{tabular}
+
+
+\section*{Förklaring av exempelfall 1}
+Låt oss anta att det står tre grupper i kö, och varje vagn rymmer precis tre personer, och att kön
+i början har utseende $[2,2,1]$. Först blir det första gruppens tur att kliva
+i vagnen. Nu har vagnen en plats kvar, och den sista gruppen i kön (bestående av en person) får gå
+före den andra gruppen, som måste vänta på nästa tur. Svaret blir då att första och sista gruppen har 0 kötid, och den andra gruppen har 1 enhet kötid. Vi skriver alltså ut \texttt{0 1 0}.
+
+

@@ -1,0 +1,45 @@
+\problemname{Udda mullvadar}
+
+Axel har en oändlig endimensionell trädgård som löper över tallinjen. Eftersom han inte orkar lägga för mycket tid på att sköta om den (en oändlig trädgård kräver en hel del tid) så är den dock full med mullvadar. Närmare bestämt så bor det en mullvad på varje position $x$, där $x$ är ett heltal (även negativa heltal). Vi kallar mullvaden på position $x$ för $m_x$.
+
+Detta stör inte Axel så länge mullvadarna är lugna och håller sig i sina bon, men då och då så får mullvadarna för sig att börja festa och allting spårar ur. En mullvadsfest går till på följande sätt:
+\begin{enumerate}
+\item Vid tid $t=0$ startar några mullvadar festen genom att sticka upp sina huvuden ovanför marken och dansa på stället. Detta räknas för mullvadar som att vara aktiv i festen.
+\item För varje tidpunkt $t > 0$ så bestämmer sig varje mullvad för om de ska vara aktiva eller inte, baserat på hur festen såg ut vid tidpunkt $t-1$. Eftersom de gillar udda tal så kommer mullvad $m_i$ att vara aktiv vid tidpunkt $t$ om det vid tidpunkt $t-1$ var ett udda antal (1 eller 3) aktiva mullvadar i närheten. I närheten av $m_i$ räknas dels $m_i$ själv samt dess två grannar ett steg till höger respektive vänster, $m_{i-1}$ och $m_{i+1}$.
+\end{enumerate}
+
+För att Axel ska hinna stoppa festen i tid behöver han veta hur många mullvadar som kommer vara aktiva vid en viss tid $t$. Hjälp honom genom att räkna ut detta.
+
+\section*{Indata}
+På första raden finns en sträng bestående av $N$ ($1 \leq N \leq 100$) tecken som beskriver området där festen startar, ``\texttt{A}''
+för en aktiv mullvad och ``\texttt{.}'' för en inaktiv. Notera att detta bara är området där festen startar, det
+är inte garanterat att festen stannar inom detta område.
+
+Den andra innehåller talet $t$ ($0 \leq t \leq 10^{18}$), antalet sekunder som festen pågår.
+
+\section*{Utdata}
+Skriv ut ett tal: antalet aktiva mullvadar vid tid $t$.
+
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Grupp} & \textbf{Poäng} & \textbf{Gränser} \\ \hline
+  $1$    & $20$       & $N=1$ och den första raden består av exakt ett '\texttt{A}'. \\ \hline
+  $2$    & $80$       & Inga ytterligare begränsningar. \\ \hline
+\end{tabular}
+
+
+\section*{Förklaring av exempelfall 1}
+Nedan följer en illustration av en exempelfest:
+
+\begin{itemize}
+\item $t=0$: \texttt{..A.AAA..}
+\item $t=1$: \texttt{.AA..A.A.}
+\item $t=2$: \texttt{A..AAA.AA}
+\end{itemize}

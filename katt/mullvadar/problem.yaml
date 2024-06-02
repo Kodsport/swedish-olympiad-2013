@@ -1,3 +1,6 @@
-source: KATT 2013
-author: PO 2013
+source: Programmeringsolympiadens KATT 2013
 rights_owner: Programmeringsolympiaden
+type: scoring
+license: cc by-sa
+grading:
+  show_test_data_groups: true

@@ -1,4 +1,7 @@
-source: KATT 2013
-author: PO 2013
+source: Programmeringsolympiadens KATT 2013
 rights_owner: Programmeringsolympiaden
-validator: float_absolute_tolerance 1e-5
+type: scoring
+license: cc by-sa
+grading:
+  show_test_data_groups: true
+validator_flags: float_absolute_tolerance 1e-5
