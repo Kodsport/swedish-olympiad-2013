@@ -20,7 +20,27 @@ oavgjort ($\exp(x)$ betecknar exponentialfunktionen $e^x$). Formeln är vald så
 Skriv ett program som, givet alla spelares förmågor, avgör vem som har
 störst chans att vinna turneringen och hur stor denna chans är.
 
-\section*{Förklaring till första exemplet}
+
+\section*{Indata}
+På första raden står ett heltal $n$ ($1 \leq n \leq 10$), antal omgångar.
+På andra raden står $2^n$ flyttal mellan 0 och 10, förmågan för
+varje spelare i nummerordning.
+
+\section*{Utdata}
+Skriv ut ett heltal och ett flyttal: numret på den spelare som har
+störst chans att vinna turneringen samt sannolikheten att den spelaren
+vinner. Om flera spelare har störst chans kan du ange vilken som helst
+av dem. Svaret accepteras om det absoluta felet är mindre än $10^{-5}$.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Grupp} & \textbf{Poäng} & \textbf{Gränser} \\ \hline
+  $1$    & $20$       & $n=1$ \\ \hline
+  $2$    & $80$       & Inga ytterligare begränsningar. \\ \hline
+\end{tabular}
+
+\section*{Förklaring exempelfall 1}
 Första matchen vinner spelare 1 med sannolikheten 0.549834 och spelare 2 med sannolikheten 0.450166.
 Andra matchen vinner spelare 3 med sannolikheten 0.689974 och spelare 4 med sannolikheten 0.310026.
 Dessa händelser är oberoende och därmed kan vi räkna ut sannolikheten
@@ -37,15 +57,3 @@ varandra. Det ger upphov till följande tabell:
 2--4 & 0.139563 & 0.668188--0.331812 & -- & 0.093254 & -- & 0.046309 \\ \hline
 {\bf Summa }& {\bf 1.000000} &                & {\bf 0.320352} & {\bf 0.240797} & {\bf 0.343269 }& {\bf 0.095581 } \\ \hline
 \end{tabular}
-
-\section*{Indata}
-På första raden står ett tal $n$, antal omgångar, där $1\leq n\leq
-10$. På andra raden står $2^n$ flyttal mellan 0 och 10, förmågan för
-varje spelare i nummerordning.
-
-\section*{Utdata}
-Ett rad med ett heltal och ett flyttal: numret på den spelare som har
-störst chans att vinna turneringen samt sannolikheten att den spelaren
-vinner. Om flera spelare har störst chans kan du ange vilken som helst
-av dem. Sannolikheten ska skrivas ut med minst 6 decimaler.
-
