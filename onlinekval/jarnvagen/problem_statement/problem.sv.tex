@@ -11,12 +11,25 @@ I dessa tider av avreglerad järnväg bestämmer sig Loke för att starta ett eg
 \end{figure}
 
 \section*{Indata}
-
 På första raden står två heltal $3\le N\ \le 20$, antalet stationer, och $1 \le P \le 100$, antalet tillfrågade personer. Stationerna är numrerade i ordning längs spåret från startstationen 1 till slutstationen $N$ (vid dessa två stationer måste tåget givetvis stanna). Därefter följer en rad med $N-1$ heltal i intervallet 2 till 1000, längden i kilometer på varje delsträcka mellan stationerna (se figur). Samtliga dessa tal är för enkelhets skull jämnt delbara med två. Tåget går nämligen normalt alltid med 120 km/h hastighet, d.v.s. varje kilometer tar exakt en halv minut. Inbromsning och acceleration gör dock att tiden för varje delsträcka förlängs med en minut om tåget stannar vid en av stationerna i delsträckans ändpunkter och två minuter om det stannar vid båda stationerna. Ingen extra tid behöver räknas för in- och avlastning, utan ankomsttid och avgångstid är samma. Slutligen följer $P$ rader med enkätsvaren, där varje rad innehåller svaren från en person: tre heltal $A$, $B$ och $M$, där $A$ är stationen personen vill åka från, $B$ är stationen personen vill åka till och $M$ är den maximala restiden (i minuter) han eller hon kan tänka sig. Talen uppfyller $1\le A < B \le N$, samt $2\le M\le 1000$.
 
-{\bf Delpoäng:} För 30\%\ av poängen gäller att $N \le 10$.
-
 \section*{Utdata}
+Skriv ut ett heltal: det maximala antalet personkilometer som kan tillryggaläggas, d.v.s. för varje
+passagerare som får sina krav tillgodosedda summerar man sträckan som hon eller han reser. 
 
-Första raden ska innehålla det maximala antalet personkilometer som kan tillryggaläggas, d.v.s. för varje passagerare som får sina krav tillgodosedda summerar man sträckan som hon eller han reser. Sedan ska programmet skriva ut tidtabellen som åstadkommer detta maximala antal personkilometer. Den består av en rad med två tal för varje station som tåget stannar vid: stationens nummer samt tidpunkten då tåget stannar där. Tåget startar alltid vid tiden 0. Om det finns flera möjliga tidtabeller ska programmet välja en som är framme vid slutstationen så tidigt som möjligt.
+Skriv sedan ut tidtabellen som åstadkommer detta maximala antal personkilometer. Den består
+av en rad med två tal för varje station som tåget stannar vid: stationens nummer samt tidpunkten då
+tåget stannar där. Tåget startar alltid vid tiden 0. Om det finns flera möjliga tidtabeller ska
+programmet välja en som är framme vid slutstationen så tidigt som möjligt.
 
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Grupp} & \textbf{Poäng} & \textbf{Gränser} \\ \hline
+  $1$    & $30$        & $N \leq 10$. \\ \hline 
+  $2$    & $70$        & Inga ytterligare begränsningar. \\ \hline 
+\end{tabular}
