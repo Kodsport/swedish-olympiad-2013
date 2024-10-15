@@ -165,7 +165,8 @@ int main()
 	scanf("%lld%lld", &N, &K);
 	for(long long i=K-1; i <= K+1; ++i){
 		printf("%c", getChar(N, i, make_pair("", 9)));
-	}	
+	}
+	printf("\n");
 	return 0;
 }
 
