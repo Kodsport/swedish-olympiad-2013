@@ -1,0 +1,19 @@
+\problemname{Team Competition}
+
+Some think that PO should have a team competition where the best school is determined based on the individual results. This naturally raises the question of how this winning school should be determined.
+If we have $N$ participants in PO and we assume that the problems are decisive enough that no participants get the same score, the result can be described as a string of $N$ letters, where each letter represents a school and they are ordered so that the first letter indicates the winner's school, the next letter indicates the second-place finisher's school, and so on (we assume in this problem that at most 26 schools participate, so the letters A--Z suffice).
+
+One possible way to determine the winning school would be to add up the placement numbers of the K best students from each school and choose the one with the smallest placement sum (schools with fewer than K students are of course not counted). The problem with this system is best illustrated with an example: Assume the result is AABCBBCCDDDA
+and that $K=3$. Then B wins with placement sum $3+5+6=14$ while A gets $1+2+12=15$. But if we instead compare A directly with every other team, without including participants from the other teams when computing placement numbers, then A wins every such \emph{duel} with $1+2+6=9$ against $3+4+5=12$. Note that \emph{all} of A's participants can affect the placements for team B, not just the first $K$.
+
+A team that \emph{wins all} such hypothetical duels against the other teams is called a \emph{Condorcet winner}, and the fact that our first method does not always select the Condorcet winner, even when one exists, can be described as the method not satisfying the \emph{Condorcet criterion}. Unsurprisingly, these terms are used more often about political election systems than programming competition results.
+
+Write a program that, given a result list and the number $K$, determines whether there is a Condorcet winner among the schools.
+
+\section*{Input}
+
+First a line with two integers $N$ and $K$, the total number of participants and the number that should count for each school ($1\le N \le 1000$ and $1\le K \le 100$). Then a line with $N$ letters, chosen from A--Z. Note that a school with fewer than $K$ participants automatically loses its duels.
+
+\section*{Output}
+
+The program should output a line with the letter representing the school that is the Condorcet winner, or the string ``Ingen'' if there is no Condorcet winner.

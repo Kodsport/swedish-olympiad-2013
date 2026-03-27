@@ -1,0 +1,77 @@
+\problemname{Number Words}
+
+Monika writes down all Swedish number words between 1 and $N$. She then sorts the words alphabetically and concatenates them into a single long string. Write a program that finds letter number $K$, $K+1$, and $K+2$ in Monika's string.
+
+To avoid problems with character encoding we replace å and ä with a. Furthermore, we use the forms etthundra, ettusen (note the spelling), enmiljon, and enmiljard, but only when the digit 1 stands \emph{alone} before the magnitude word (not counting earlier magnitude words). When the digit 1 instead is at the end of a prefix denoting \emph{several} thousands, millions, or billions, we always write ``en'' for simplicity: tjugoentusen, etthundraenmiljoner, tvahundraattioenmiljarder, etc. At the very end of a number word, we always write the digit 1 as ``ett''.
+
+A table with the basic number words and some examples of longer words hopefully clarifies the rules:
+
+\begin{tabular}{|r|l||r|l|} \hline
+{\bf Number} & {\bf Number word} & {\bf Number} & {\bf Number word} \\ \hline
+1 & ett & 10 & tio\\
+2 & tva & 20 & tjugo\\
+3 & tre & 30 & trettio\\
+4 & fyra & 40 & fyrtio\\
+5 & fem & 50 & femtio\\
+6 & sex & 60 & sextio\\
+7 & sju & 70 & sjuttio\\
+8 & atta & 80 & attio\\
+9 & nio & 90 & nittio\\
+11 & elva & 100 & etthundra\\
+12 & tolv & 198 & etthundranittioatta\\
+13 & tretton & 201 & tvahundraett\\
+14 & fjorton & 1121 & ettusenetthundratjugoett\\
+15 & femton & $581\,743$ & femhundraattioentusensjuhundrafyrtiotre \\
+16 & sexton & $51\,101\,001$ & femtioenmiljoneretthundraentusenett\\
+17 & sjutton & $162\,500\,020$ & etthundrasextiotvamiljonerfemhundratusentjugo\\
+18 & arton & $1\,002\,001\,004$ & enmiljardtvamiljonerettusenfyra\\
+19 & nitton & $91\,011\,091\,000$ & nittioenmiljarderelvamiljonernittioentusen\\ \hline
+\end{tabular}
+
+And as an additional check, we give the length of Monika's string for some different $N$:
+
+\begin{tabular}{|r|r|}\hline
+{\bf N} & {\bf String length} \\ \hline
+999 & 16260 \\
+9999 & 235600 \\
+99999 & 2908000 \\
+999999 & 37425000 \\
+9999999   & 472250000 \\
+99999999 & 5319500000\\
+999999999 & 61585000000\\
+9999999999 & 722850000000 \\
+99999999999 &	7834500000000 \\
+999999999999 &86744000000000 \\ \hline
+\end{tabular}
+
+
+\section*{Input}
+A line with two integers $N$ and $K$, where $1 \leq N < 10^{12}$ and $1 \leq K \leq L-2$, where $L$ is the length of the formed string.
+
+\section*{Output}
+A line with three letters without separating spaces: letter number $K$, $K+1$, and $K+2$ in the string. 
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+  $1$   & $15$       & $N \leq 2000 $\\ \hline
+  $2$   & $20$       & $N \leq 5*10^5 $\\ \hline
+  $3$   & $30$       & $N = 999\,999\,999\,999 $\\ \hline
+  $4$   & $35$       & No additional constraints. \\ \hline
+\end{tabular}
+
+\section*{Explanation of the First Example}
+
+Monika's string, written with 40 characters per line, is
+
+\begin{verbatim}
+artonattaelvaettfemfemtonfjortonfyranion
+ittonsexsextonsjusjuttontiotjugotjugoett
+tjugofemtjugofyratjugosextjugotretjugotv
+atolvtretrettontva
+\end{verbatim}

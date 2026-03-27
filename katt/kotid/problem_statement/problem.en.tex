@@ -1,0 +1,33 @@
+\problemname{Queue Time}
+You have gotten a job at a well-known amusement park. There are many interesting problems that need to be solved there, but your first task is to improve the information for those queuing for the roller coaster. The best they have now is a sign that says ``20 minutes queue from here'', regardless of how long the queue is.
+
+The only roller coaster car has room for $K$ people and takes 1 minute to ride one lap. Boarding and disembarking take no time. Visitors arrive at the queue in groups that refuse to be split across multiple cars. It therefore sometimes happens that a car is not filled completely because the next group is too large. When this happens, the ride operators do their best to fill the car by letting some group further back in the queue go ahead. If for example there are $x$ empty seats in the current car, they find the next group in the queue with size \emph{less than or equal to} $x$ and fill the car with it. This process is then repeated until no more groups fit in the car. Your task is to compute, for each group in the queue, how long they will have to wait.
+
+\section*{Input}
+The first line contains two integers $N$ and $K$ ($1 \leq N \leq 10^6$, $1 \leq K \leq 10^8$), the number of
+groups in the queue and the number of people per car. The next line contains $N$ integers $g_i$, ($1 \leq g_i \leq K$),
+the sizes of the groups in the queue. The first group in the input is the one at the front of the queue.
+
+\section*{Output}
+Output a line with $N$ integers separated by spaces, the queue time for each group.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+  $1$    & $20$       & $N \leq 1000$, $1 \leq K \leq N$ \\ \hline
+  $2$    & $40$       & $N \leq 10^5$ \\ \hline
+  $3$    & $40$       & No additional constraints. \\ \hline
+\end{tabular}
+
+
+\section*{Explanation of Sample 1}
+Assume that there are three groups in the queue, and each car fits exactly three people, and that the queue
+initially looks like $[2,2,1]$. First it is the first group's turn to board
+the car. Now the car has one seat left, and the last group in the queue (consisting of one person) gets to go
+ahead of the second group, which has to wait for the next turn. The answer is then that the first and last groups have 0 queue time, and the second group has 1 unit of queue time. We thus output \texttt{0 1 0}.
