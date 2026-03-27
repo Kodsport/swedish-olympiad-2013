@@ -1,0 +1,37 @@
+\problemname{Orchestra Optimization}
+
+The Problem-Solving Orchestra is a group of programmer-musicians busy planning their upcoming tour. The most important task is to maximize the noise they can produce in each song, in order to achieve optimal audience appreciation.
+
+The orchestra consists of $N$ musicians and has asked you to optimize a song that consists of $M$ measures. Each musician has only practiced the measures they found interesting and is not capable of playing the rest. Each time a musician plays a measure, this is done with a noise level of $V=1/(X+1)$ noise units, where $X$ is the number of measures the musician has played previously in the song. A musician thus plays softer and softer the more measures they play, which of course is due to the effort of lifting their instrument.
+
+The noise in a measure is computed by taking the maximum $V$ among the musicians who play then (only the one who plays loudest is heard), or $0$ if no one plays in that measure. To compute the total noise in the song, one simply adds up the noise for all measures. Your task is to compute how much noise can be produced in the song, given that the orchestra plays optimally.
+
+\emph{Note that all musicians play equally well; the only thing that matters for the amount of noise a musician can produce is the number of measures they have played previously.}
+
+\section*{Input}
+The first line consists of two integers, $N$ and $M$ ($1 \leq N \leq 1000$, $20 < M \leq 1000$).
+
+Then follow $N$ lines, each describing a musician. These lines start with an integer $T_i$,
+the number of measures musician $i$ has practiced, followed by $T_i$ integers describing which measures
+the musician has practiced. Each measure is represented by a number between $1$ and $M$.
+It is also guaranteed that the sum of all $T_i$ is less than $20000$.
+
+\section*{Output}
+Output a floating-point number, the maximum noise that can be produced in the song. An absolute error less than $10^{-5}$ is considered correct.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+  $1$    & $20$       & $N, M \leq 20$ \\ \hline
+  $2$    & $80$       & No additional constraints. \\ \hline
+\end{tabular}
+
+
+
+\section*{Explanation of Sample 1}
+Assume that we have two people and five measures. Person 1 can play all measures, and person 2 can only play the first two (see sample input 1). Then we let the second person play the two measures they know, and the first person plays the rest. The sum of all noise levels becomes (in measure order) $1 + 1/2 + 1 + 1/2 + 1/3 = 10/3$.

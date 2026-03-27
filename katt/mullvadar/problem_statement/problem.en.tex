@@ -1,0 +1,45 @@
+\problemname{Odd Moles}
+
+Axel has an infinite one-dimensional garden that runs along the number line. Since he cannot be bothered to spend too much time maintaining it (an infinite garden requires quite a lot of time), it is full of moles. More specifically, there is a mole at every position $x$, where $x$ is an integer (including negative integers). We call the mole at position $x$ $m_x$.
+
+This does not bother Axel as long as the moles are calm and stay in their burrows, but now and then the moles decide to start partying and everything goes haywire. A mole party works as follows:
+\begin{enumerate}
+\item At time $t=0$, some moles start the party by sticking their heads above ground and dancing in place. This counts for moles as being active in the party.
+\item For each time step $t > 0$, each mole decides whether to be active or not, based on what the party looked like at time $t-1$. Since they like odd numbers, mole $m_i$ will be active at time $t$ if at time $t-1$ there was an odd number (1 or 3) of active moles nearby. Near $m_i$ counts $m_i$ itself as well as its two neighbors one step to the right and left, $m_{i-1}$ and $m_{i+1}$.
+\end{enumerate}
+
+To stop the party in time, Axel needs to know how many moles will be active at a certain time $t$. Help him by computing this.
+
+\section*{Input}
+The first line contains a string of $N$ ($1 \leq N \leq 100$) characters describing the area where the party starts, ``\texttt{A}''
+for an active mole and ``\texttt{.}'' for an inactive one. Note that this is just the area where the party starts, it
+is not guaranteed that the party stays within this area.
+
+The second line contains the number $t$ ($0 \leq t \leq 10^{18}$), the number of seconds the party goes on.
+
+\section*{Output}
+Output a number: the number of active moles at time $t$.
+
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+  $1$    & $20$       & $N=1$ and the first line consists of exactly one `\texttt{A}'. \\ \hline
+  $2$    & $80$       & No additional constraints. \\ \hline
+\end{tabular}
+
+
+\section*{Explanation of Sample 1}
+Below is an illustration of a sample party:
+
+\begin{itemize}
+\item $t=0$: \texttt{..A.AAA..}
+\item $t=1$: \texttt{.AA..A.A.}
+\item $t=2$: \texttt{A..AAA.AA}
+\end{itemize}

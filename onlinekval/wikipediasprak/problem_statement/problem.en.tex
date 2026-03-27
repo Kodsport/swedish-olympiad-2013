@@ -1,0 +1,28 @@
+\problemname{Wikipedia Language}
+
+If I say ``Sort the words [\emph{zebra, anka, duva}]!'' you quickly answer [\emph{anka, duva, zebra}]. Easy, right? This applies even if you do not recognize the meaning of the words or all the characters in the language, like [\emph{fünf, como estás, désolé}]. We know Swedish and English and probably the answer is [\emph{como estás, désolé, fünf}]. Still not that hard. But there are probably few programming olympiad participants who can sort such word lists as soon as Chinese, Persian, and other non-Latin characters are involved. How would you compare an English word with a Persian word? One of the problem authors does know how Persian words should be pronounced, but without that knowledge it becomes difficult.
+
+
+Assume now that we want to compile a sorted list of words. To help us, we have a number of people who each recognize a number of words and know their relative order. We do not need to include all words in our word list, but we want to be completely sure that the words we include are correctly sorted. Write a program that computes the maximum number of words we can have in the word list, and outputs a valid word list with that many words.
+
+\section*{Input}
+For simplicity, you do not need to read the actual words; instead each word is represented by an index between $0$ and $N-1$. The first line of input contains two integers $N$ ($1 \leq N \leq 130000$) and $P$ ($1 \leq P \leq 10^5$), where $N$ is the number of words and $P$ is the number of people. Then follow $P$ lines, each specifying the order of the words a certain person knows. Each such line starts with an integer $2 \leq p_i \leq 25$ describing how many words the person knows the relative sort order for. Then follow $p_i$ integers in the range $0$ to $N-1$, the indices of the words the person knows in the order they should be sorted. It is not guaranteed that all $N$ words appear on some list, and a word can of course appear on multiple lists. There will be no contradictions in the input.
+
+
+\section*{Output}
+First output an integer: the maximum number of words $M$ in a guaranteed correctly sorted word list. Then output
+a line with such a sorted word list containing the $M$ word indices. If there are multiple possible such
+word lists, the program may output any of them.
+
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+  $1$    & $30$       & $N \leq 30$ \\ \hline
+  $2$    & $70$       & No additional constraints. \\ \hline
+\end{tabular}

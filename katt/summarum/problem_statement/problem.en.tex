@@ -1,0 +1,33 @@
+\problemname{Summa Summarum}
+
+Anders and Beatrice each have a list of integers. These two lists contain the same number of numbers. Anders has a dream. He dreams that the sum of all numbers in his list will be equal to the sum of all numbers in Beatrice's list (because that would impress her). Anders has studied several years at university, so he knows that this is not always the case. However, Anders has a plan to get closer to his dream.
+
+Anders wants to make the difference between the two sums as small as possible. Anders can take one of the numbers in his own list and swap it with one of the numbers in Beatrice's list, when she is not looking. Note that he only dares to make one such swap, otherwise it becomes too suspicious.
+
+Given that he must make exactly one such swap, what is the \emph{minimum difference} between the sums that Anders can achieve?
+
+\section*{Input}
+The first line contains the integer $N$ ($1 \leq N \leq 10^5$), the number of numbers in Anders' and Beatrice's lists.
+
+The second line contains a list of $N$ integers describing the numbers in Anders' list. The third and last line of input contains a list of $N$ integers describing the numbers in Beatrice's list. For each number $X$ in the lists, $-10^5 \leq X \leq 10^5$.
+
+\section*{Output}
+Output an integer: the minimum difference between the sums of Anders' and Beatrice's lists, after Anders has performed the swap described above.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+  $1$    & $20$       & $N \leq 1000$ \\ \hline
+  $2$    & $80$       & No additional constraints. \\ \hline
+\end{tabular}
+
+
+\section*{Explanation of Sample 1}
+Assume that Anders' and Beatrice's lists are $[5,2,3,5,1]$ and $[1,4,3,4,2]$ respectively. If we take a five
+from the first list and swap it with a four from the second list, then the lists will contain exactly
+the same numbers. This means both sums will be $15$, and we answer $0$.
