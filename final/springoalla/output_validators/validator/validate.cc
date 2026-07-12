@@ -31,14 +31,16 @@ int main(int argc, char **argv) {
 	string tmp;
 	if (cin >> tmp) wrong_answer("Trailing output");
 
-    int realteamn = 0;
+    long long realteamn = 0, realteamt = 0;
     for (int i = 0; i < N; i++) {
         if (minutes[i] == 0) continue;
         if (minutes[i] < L[i]) wrong_answer("ran track, but less than full lap??");
         if (minutes[i] % (L[i] / 2)) wrong_answer("did not run track 1+0.5n number of times");
         realteamn += (minutes[i] + (L[i] / 2)) / L[i];
+        realteamt += minutes[i];
     }
     if (realteamn != teamn) wrong_answer("claimed to run %d times, but actually ran %d times", teamn, realteamn);
+    if (realteamt != teamt) wrong_answer("Incorrect total run time claimed");
 
 	if (teamt < judget) {
 		judge_error("gave better t_s than judge");

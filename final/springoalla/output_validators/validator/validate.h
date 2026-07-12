@@ -50,14 +50,15 @@
 #include <fstream>
 #include <sstream>
 
+__attribute__((format(printf, 1, 2)))
 typedef void (*feedback_function)(const char*, ...);
 
 const int EXITCODE_AC = 42;
 const int EXITCODE_WA = 43;
-const std::string FILENAME_AUTHOR_MESSAGE = "teammessage.txt";
-const std::string FILENAME_JUDGE_MESSAGE = "judgemessage.txt";
-const std::string FILENAME_JUDGE_ERROR = "judgeerror.txt";
-const std::string FILENAME_SCORE = "score.txt";
+const char* FILENAME_AUTHOR_MESSAGE = "teammessage.txt";
+const char* FILENAME_JUDGE_MESSAGE = "judgemessage.txt";
+const char* FILENAME_JUDGE_ERROR = "judgeerror.txt";
+const char* FILENAME_SCORE = "score.txt";
 
 #define USAGE "%s: judge_in judge_ans feedback_dir < author_out\n"
 
@@ -66,17 +67,9 @@ std::istream author_out(std::cin.rdbuf());
 
 char *feedbackdir = NULL;
 
-void vreport_feedback(const std::string &category,
+void vreport_feedback(const char* category,
                       const char* msg,
                       va_list pvar) {
-	// First print the message to stderr, to aid debugging.
-	va_list pvar2;
-	va_copy(pvar2, pvar);
-	fprintf(stderr, "%s: ", category.c_str());
-	vfprintf(stderr, msg, pvar2);
-	fprintf(stderr, "\n");
-	va_end(pvar2);
-	// Then print it to the expected file.
     std::ostringstream fname;
     if (feedbackdir)
         fname << feedbackdir << '/';
@@ -87,44 +80,44 @@ void vreport_feedback(const std::string &category,
     fclose(f);
 }
 
-void report_feedback(const std::string &category, const char* msg, ...) {
+__attribute__((format(printf, 2, 3)))
+void report_feedback(const char* category, const char* msg, ...) {
     va_list pvar;
     va_start(pvar, msg);
     vreport_feedback(category, msg, pvar);
-	va_end(pvar);
 }
 
+__attribute__((format(printf, 1, 2)))
 void author_message(const char* msg, ...) {
     va_list pvar;
     va_start(pvar, msg);
     vreport_feedback(FILENAME_AUTHOR_MESSAGE, msg, pvar);
-	va_end(pvar);
 }
 
+__attribute__((format(printf, 1, 2)))
 void judge_message(const char* msg, ...) {
     va_list pvar;
     va_start(pvar, msg);
     vreport_feedback(FILENAME_JUDGE_MESSAGE, msg, pvar);
-	va_end(pvar);
 }
 
 [[noreturn]]
+__attribute__((format(printf, 1, 2)))
 void wrong_answer(const char* msg, ...) {
     va_list pvar;
     va_start(pvar, msg);
     vreport_feedback(FILENAME_JUDGE_MESSAGE, msg, pvar);
-	va_end(pvar);
     exit(EXITCODE_WA);
 }
 
 [[noreturn]]
+__attribute__((format(printf, 1, 2)))
 void judge_error(const char* msg, ...) {
     va_list pvar;
     va_start(pvar, msg);
     vreport_feedback(FILENAME_JUDGE_ERROR, msg, pvar);
-	va_end(pvar);
-	abort();
-	exit(1);
+    assert(0);
+    exit(1);
 }
 
 [[noreturn]]

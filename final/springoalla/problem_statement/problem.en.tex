@@ -8,12 +8,12 @@ Then, she will only spend half the time in the track.
 For example she can run a half $20$ minute trail in $10$ minutes, but only after first running the entire trail once.
 
 Springoalla wants to run for at least $t$ minutes without running for too long.
-Given the time it takes to run each trail, compute the minimum number of minute $t_s \ge t$ she must run.
+Given the time it takes to run each trail, compute the minimum number of minutes $t_s \ge t$ she must run.
 If there are several ways to run $t_s$ minutes, she wants to run as few trails $n_s$ as possible, where each time she starts to run counts once, even if she runs a whole or half a trail.
 
 \section*{Input}
 The first line of input contains the integers $n$ and $t$, where $1 \le n \le 1\,000$ is the number of trails and $1 \le t \le 100\,000$ is the time Springoalla wants to run.
-The second line contains $n$ integers $l_i$, where $1 \le l_i \le 40\,000$ is an even integer: the number of minutes it takes to run trail $i$.
+The second line contains $n$ integers $l_i$, where $2 \le l_i \le 40\,000$ is an even integer: the number of minutes it takes to run trail $i$.
 Note that $t$ is not necessarily even.
 
 \section*{Output}
@@ -22,15 +22,15 @@ Then output $n$ integers, where the $i$'th is the number of minutes she should s
 If there are several solutions with the same $t_s$ and $n_s$ you may output any one of them.
 
 
-\section*{Points}
-Your solution will be tested on several test case groups.
-To get the points for a group, it must pass all the test cases in the group.
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
 
 \noindent
 \begin{tabular}{| l | l | p{12cm} |}
   \hline
-  \textbf{Group} & \textbf{Point value} & \textbf{Constraints} \\ \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
   $1$    & $20$        & $n \le 10, t \le 1\,000$ \\ \hline 
-  $2$    & $30$        & Springoalla only needs to run whole trails \\ \hline
+  $2$    & $30$        & Springoalla only needs to run whole trails. \\ \hline
   $3$    & $50$        & No additional constraints. \\ \hline 
 \end{tabular}

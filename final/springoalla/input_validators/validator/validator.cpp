@@ -40,7 +40,10 @@ void run() {
     N = Int(1, Arg("maxn")); Space();
     T = Int(1, Arg("maxt")); Endl();
     is = SpacedInts(N, 1, 40'000);
-    Eof();
+
+    for (int l : is) {
+        assert(l%2==0);
+    }
 
     bool onlywhole = Arg("onlywhole");
     if (onlywhole) {
