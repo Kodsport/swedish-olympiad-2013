@@ -52,7 +52,7 @@ void solve() {
                 int ts = t + OT - T;
                 int ns = least[t] + 2 * __builtin_popcount(msk);
                 while (t) {
-                    rep(i,0,2*N) {
+                    rep(i,0,N) {
                         if (I[i] <= t && least[t] == least[t - I[i]] + 1) {
                             res[i] += I[i];
                             t -= I[i];

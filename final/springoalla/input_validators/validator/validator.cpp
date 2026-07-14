@@ -36,16 +36,22 @@ pii solve(bool onlywhole) {
     assert(false);
 }
 
+const int MAX_N = 1000;
+const int MAX_T = 1e5;
+const int MAX_TIME = 4e4;
+
 void run() {
-    N = Int(1, Arg("maxn")); Space();
-    T = Int(1, Arg("maxt")); Endl();
-    is = SpacedInts(N, 1, 40'000);
+    N = Int(1, Arg("maxn", MAX_N));
+    Space();
+    T = Int(1, Arg("maxt", MAX_T));
+    Endl();
+    is = SpacedInts(N, 2, MAX_TIME);
 
     for (int l : is) {
         assert(l%2==0);
     }
 
-    bool onlywhole = Arg("onlywhole");
+    bool onlywhole = Arg("onlywhole", false);
     if (onlywhole) {
         assert(solve(true) == solve(false));
     }

@@ -36,10 +36,10 @@ int main(int argc, char **argv) {
         if (minutes[i] == 0) continue;
         if (minutes[i] < L[i]) wrong_answer("ran track, but less than full lap??");
         if (minutes[i] % (L[i] / 2)) wrong_answer("did not run track 1+0.5n number of times");
-        realteamn += (minutes[i] + (L[i] / 2)) / L[i];
+        realteamn += ((long long)minutes[i] + (L[i] / 2)) / L[i];
         realteamt += minutes[i];
     }
-    if (realteamn != teamn) wrong_answer("claimed to run %d times, but actually ran %d times", teamn, realteamn);
+    if (realteamn != teamn) wrong_answer("claimed to run %d times, but actually ran %lld times", teamn, realteamn);
     if (realteamt != teamt) wrong_answer("Incorrect total run time claimed");
 
 	if (teamt < judget) {
