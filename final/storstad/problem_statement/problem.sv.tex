@@ -2,7 +2,7 @@
 
 Deltagarna i den svenska programmeringsolympiaden älskar geometri, och det med rätta. Den största
 favoriten bland geometrierna är den så kallade \emph{manhattangeometrin}. Manhattanavståndet
-mellan två punkter \textbf{P} och \textbf{Q} i ett regelbundet rutnät beskriver hur många punkter
+mellan två punkter \textbf{P} och \textbf{Q} i ett regelbundet rutnät beskriver hur många kanter
 man måste passera för att ta sig från \textbf{P} till \textbf{Q}, givet att man bara får gå
 horisontellt och vertikalt.
 
@@ -24,13 +24,13 @@ så att summan av manhattanavstånden till alla dina $N$ vänner från din läge
 \end{figure}
 
 \section*{Indata}
-Den första raden av indata innehåller två heltal $N$ och $M$ ($1 \leq N \leq 10^5$, $1 \leq M \leq 10^5$), antalet vänner
+Den första raden av indata innehåller två heltal $N$ och $M$ ($1 \leq N, M \leq 10^5$), antalet vänner
 och antalet lägenheter du kan välja mellan.
 
-Sedan följer $N$ rader med par av heltal $x_i$ och $y_i$ ($-10 000 \leq x_i, y_i \leq 10 000$), som beskriver på
+Sedan följer $N$ rader med par av heltal $x_i$ och $y_i$ ($-10{,}000 \leq x_i, y_i \leq 10{,}000$), som beskriver på
 vilka korsningar i staden som dina vänner bor.
 
-Slutligen följer $M$ rader med par av heltal $x_i$ och $y_i$ ($-10 000 \leq x_i, y_i \leq 10 000$),
+Slutligen följer $M$ rader med par av heltal $x_i$ och $y_i$ ($-10{,}000 \leq x_i, y_i \leq 10{,}000$),
 som beskriver på vilka korsningar i staden du kan välja att bo.
 Notera att det kan finnas flervåningshus i storstaden (en punkt kan förekomma flera gånger i indata).
 
@@ -47,6 +47,6 @@ För att få poäng för en grupp så måste du klara alla testfall i gruppen.
 \begin{tabular}{| l | l | p{12cm} |}
   \hline
   \textbf{Grupp} & \textbf{Poäng} & \textbf{Gränser} \\ \hline
-  $1$   & $40$       & $N \leq 10^4$ och $M \leq 100$ \\ \hline
-  $2$   & $60$       & Inga ytterligare begränsningar.\\ \hline
+  $1$   & $40$       & $N \leq 10{,}000, M \leq 100$ \\ \hline
+  $2$   & $60$       & Inga ytterligare begränsningar. \\ \hline
 \end{tabular}

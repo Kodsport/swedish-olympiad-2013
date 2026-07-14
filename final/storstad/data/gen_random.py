@@ -20,6 +20,6 @@ A = int(cmdlinearg('a'))
 
 print(N, M)
 for i in range(N+M):
-	x = max(1-A, random.randint(0, 2*A-1)-A)
-	y = max(1-A, random.randint(0, 2*A-1)-A)
+	x = random.randint(-A, A)
+	y = random.randint(-A, A)
 	print(x, y)

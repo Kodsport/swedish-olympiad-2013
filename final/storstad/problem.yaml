@@ -2,8 +2,10 @@ uuid: 626a9935-87d7-4ff0-900c-ed0af478d1de
 author: Oskar Werkelin Ahlin
 source: Programmeringsolympiadens final 2013
 rights_owner: Programmeringsolympiaden
-validator_flags: float_absolute_tolerance 2e-4
 license: cc by-sa
 type: scoring
 grading:
   show_test_data_groups: yes
+
+limits:
+  time_multiplier: 2

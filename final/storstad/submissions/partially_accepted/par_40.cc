@@ -23,7 +23,7 @@ int fcmpy(const void *v1, const void *v2) {
 }
 
 int main() {
-  int d[100000],ordx[200000], ordy[200000],i,n,np,min;
+  int d[200000],ordx[200000], ordy[200000],i,n,np,min;
   scanf("%d %d", &np, &i);
   n=np+i;
   for(i=0;i<n;i++) {
